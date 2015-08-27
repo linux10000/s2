@@ -85,6 +85,7 @@ public class PropriedadesDao implements Serializable {
 		if ( !projeto_conf.exists() )
 			projeto_conf.mkdirs();			
 		
+		
 		File cfg = new File(projeto_conf.getPath() + System.getProperty("file.separator") + "s2.cfg");
 		
 		if (!cfg.exists())
