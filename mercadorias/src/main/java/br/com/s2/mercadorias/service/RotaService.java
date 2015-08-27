@@ -234,7 +234,7 @@ public class RotaService extends GenericService<Rota> {
 			
 			skip = skip + 10;
 			rotasPossiveis = rotaDao.obtemRotaPorOrigem(origem, mapnid, tamanhoPagina, skip);
-		} while ( rotasPossiveis == null || rotasPossiveis.size() > 0);
+		} while ( rotasPossiveis != null && rotasPossiveis.size() > 0);
 		
 		if ( primeiroNivel ){
 			params.remove("distanciaCorrente");
