@@ -1,0 +1,25 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<b:beans xmlns="http://www.springframework.org/schema/security"
+        xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+        xmlns:b="http://www.springframework.org/schema/beans"
+		xmlns:context="http://www.springframework.org/schema/context"
+		xmlns:c="http://www.springframework.org/schema/c"
+		xmlns:p="http://www.springframework.org/schema/p"
+        xsi:schemaLocation="http://www.springframework.org/schema/security 
+        http://www.springframework.org/schema/security/spring-security-4.0.xsd
+		http://www.springframework.org/schema/beans 
+		http://www.springframework.org/schema/beans/spring-beans.xsd
+		http://www.springframework.org/schema/context 
+		http://www.springframework.org/schema/context/spring-context-4.0.xsd">
+
+	
+	<context:component-scan base-package="br.com.s2.mercadorias.dao"/>
+	<context:component-scan base-package="br.com.s2.mercadorias.service"/>
+	
+	<b:bean id="jpaUtils" class="br.com.s2.mercadorias.helper.JpaUtils"/>
+    
+	<b:import resource="applicationContext-security.xml" />
+    <context:annotation-config/>
+
+</b:beans>

@@ -1,0 +1,59 @@
+.datatable_linha_selecionada {
+	background-color: red !important;
+}
+
+.ui-autocomplete-loading {
+    background: white url('../imagens/ajax-loader.gif') right center no-repeat;
+  } 
+
+
+.erros {
+     color: #FF6666; 
+     font-style: italic;     
+}
+
+.errorblock{
+	color: #000;
+	background-color: #ffEEEE;
+	border: 3px solid #ff0000;
+	padding:8px;
+	margin:16px;
+}
+
+.dataTables_scrollBody .grid_celula_numero {
+	text-align: right;
+}
+
+.search_init {
+	/*background-color: red;*/
+}
+
+.centralizar_grid_horizontalmente .tabContainer {
+	display: block;
+	margin-left: auto;
+	margin-right: auto;
+}
+/*
+.ui-button-icon-primary{
+	top: 5px!important;
+	left: 5px!important;	
+}
+
+.ui-dialog-titlebar {
+	background-color: gray!important;	
+	height: 20px!important;
+}
+
+.ui-dialog-title{
+	font-size: 20px!important;
+	margin-top: 0px!important;
+}
+
+.ui-dialog-titlebar-close {	
+	margin-top: -3px!important;
+
+}
+*/
+
+
+
