@@ -14,7 +14,7 @@ Tomcat deve ser instalado em um diretorio onde o projeto possa ter acesso de gra
 - - {contextPath projeto}
 - -- s2.cfg
 
-Se nao houver permissao de gravacao uma exception sera lancada e nao sera possivel inputar o caminho de conexao da base de dados sem alterar o codigo-fonte.
+Se nao houver permissao de gravacao, uma exception sera lancada e nao sera possivel inputar o caminho de conexao da base de dados sem alterar o codigo-fonte.
 
 
 INFORMACOES SOBRE O PROJETO
