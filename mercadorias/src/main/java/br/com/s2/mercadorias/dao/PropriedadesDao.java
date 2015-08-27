@@ -81,11 +81,11 @@ public class PropriedadesDao implements Serializable {
 		if ( !raiz_install.canRead() || !raiz_install.canWrite() )
 			throw new S2Exception("É preciso de permissões de leitura e gravação para a pasta " + raiz_install.getAbsolutePath());
 		
-		File projeto_conf = new File(raiz_install.getAbsolutePath() + System.getProperty("file.separator") + "etica_conf" + System.getProperty("file.separator") + raiz_projeto.getName().toLowerCase());
+		File projeto_conf = new File(raiz_install.getAbsolutePath() + System.getProperty("file.separator") + "s2_conf" + System.getProperty("file.separator") + raiz_projeto.getName().toLowerCase());
 		if ( !projeto_conf.exists() )
 			projeto_conf.mkdirs();			
 		
-		File cfg = new File(projeto_conf.getPath() + System.getProperty("file.separator") + "etica.cfg");
+		File cfg = new File(projeto_conf.getPath() + System.getProperty("file.separator") + "s2.cfg");
 		
 		if (!cfg.exists())
 			new Properties().store(new FileOutputStream(cfg), null);
