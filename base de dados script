@@ -1,0 +1,44 @@
+SET @OLD_UNIQUE_CHECKS=@@UNIQUE_CHECKS, UNIQUE_CHECKS=0;
+SET @OLD_FOREIGN_KEY_CHECKS=@@FOREIGN_KEY_CHECKS, FOREIGN_KEY_CHECKS=0;
+SET @OLD_SQL_MODE=@@SQL_MODE, SQL_MODE='TRADITIONAL';
+
+CREATE SCHEMA IF NOT EXISTS `mercadorias2` DEFAULT CHARACTER SET latin1 ;
+USE `mercadorias2` ;
+
+-- -----------------------------------------------------
+-- Table `mercadorias`.`mapa`
+-- -----------------------------------------------------
+CREATE  TABLE IF NOT EXISTS `mercadorias2`.`mapa` (
+  `mapnid` BIGINT(20) NOT NULL AUTO_INCREMENT ,
+  `mapcdescri` VARCHAR(100) NOT NULL ,
+  PRIMARY KEY (`mapnid`) )
+ENGINE = InnoDB
+AUTO_INCREMENT = 8
+DEFAULT CHARACTER SET = latin1;
+
+
+-- -----------------------------------------------------
+-- Table `mercadorias`.`rota`
+-- -----------------------------------------------------
+CREATE  TABLE IF NOT EXISTS `mercadorias2`.`rota` (
+  `rotnid` BIGINT(20) NOT NULL AUTO_INCREMENT ,
+  `rotnorigem` INT(11) NOT NULL ,
+  `rotndestino` INT(11) NOT NULL ,
+  `rotcdistancia` INT(11) NOT NULL ,
+  `mapnid` BIGINT(20) NOT NULL ,
+  PRIMARY KEY (`rotnid`) ,
+  INDEX `FK_ROT_MAP` (`mapnid` ASC) ,
+  CONSTRAINT `FK_ROT_MAP`
+    FOREIGN KEY (`mapnid` )
+    REFERENCES `mercadorias2`.`mapa` (`mapnid` )
+    ON DELETE NO ACTION
+    ON UPDATE NO ACTION)
+ENGINE = InnoDB
+AUTO_INCREMENT = 67
+DEFAULT CHARACTER SET = latin1;
+
+
+
+SET SQL_MODE=@OLD_SQL_MODE;
+SET FOREIGN_KEY_CHECKS=@OLD_FOREIGN_KEY_CHECKS;
+SET UNIQUE_CHECKS=@OLD_UNIQUE_CHECKS;
