@@ -225,7 +225,9 @@ public class RotaService extends GenericService<Rota> {
 					return params;
 				}
 				else {
-					obtemMenorDistancia(params, mapnid, rota.getRotndestino(), destino);
+					if ( rota.getRotndestino() < destino )
+						obtemMenorDistancia(params, mapnid, rota.getRotndestino(), destino);
+					
 					params.put("distanciaCorrente", ((long) params.get("distanciaCorrente")) - rota.getRotcdistancia());
 					((List<Rota>) params.get("listaCorrente")).remove(rota);
 				}
