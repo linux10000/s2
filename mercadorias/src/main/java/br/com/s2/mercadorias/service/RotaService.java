@@ -210,6 +210,10 @@ public class RotaService extends GenericService<Rota> {
 
 		do {
 			for (Rota rota : rotasPossiveis) {
+				
+				if ( ((List<Rota>) params.get("listaCorrente")).contains(rota) )
+					return params;
+				
 				params.put("distanciaCorrente", ((long) params.get("distanciaCorrente")) + rota.getRotcdistancia());
 				((List<Rota>) params.get("listaCorrente")).add(rota);
 				if ( rota.getRotndestino() == destino ){
